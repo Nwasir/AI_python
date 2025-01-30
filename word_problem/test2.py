@@ -1,3 +1,4 @@
+import math
 """A school wants to calculate final grades for students based on four 
 test scores: s1, s2, s3, and s4. Each score is weighted differently, 
 as follows:

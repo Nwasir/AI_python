@@ -1,3 +1,4 @@
+
 ice_cream_flavors = {
     "Mint Chocolate Chip": "Refreshing mint ice cream studded with decadent chocolate chips.",
     "Cookie Dough": "Vanilla ice cream loaded with chunks of chocolate chip cookie dough.",
