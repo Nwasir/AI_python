@@ -1,1 +1,9 @@
-President James E. Faust of the First Presidency explained how Lucifer fell from his position ofauthority: Because of his rebellion, Lucifer was castout and became Satan, the devil, the father of all lies,to deceive and to blind men, and to lead them captiveat his will, even as many as would not hearken unto myvoice�. And so this personage who was an angel of Godand in authority, even in the presence of God, wasremoved from the presence of God and his Son.  Thiscaused great sadness in the heavens, for the heavenswept over him�he was Lucifer, a son of the morning
+Regex examples
+r”\d{3}-\d{3}-\d{4}”  This line of code matches U.S. phone numbers in
+the format 111-222-3333.
+
+r”^-?\d*(\.\d+)?$”  This line of code matches any positive or 
+negative number, with or without decimal places.
+
+r”^/(.+)/([^/]+)/$” This line of code is often used to extract 
+specific parts of URLs or file paths, such as the directory names or filenames.
