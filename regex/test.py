@@ -115,7 +115,7 @@ change. Fill in the regular expression, using groups, to use the
 transform_record() function to do that."""
 import re
 def transform_record(record):
-  new_record = re.sub(r"(\b\d{3})[-.]?(\d{3})[-.]?(\d{4})", r"+1-\1-\2-\3", record)
+  new_record = re.sub(r"(\b\d{3})[-.]?(\d{7}|\d{3}[-.]?\d{4})", r"+1-\1-\2", record)
   return new_record
 
 print(transform_record("Sabrina Green,802-867-5309,System Administrator")) 
@@ -129,3 +129,28 @@ print(transform_record("Melody Daniels,846-687-7436,Programmer"))
 
 print(transform_record("Charlie Rivera,698-746-3357,Web Developer")) 
 # Charlie Rivera,+1-698-746-3357,Web Developer
+
+"""We're using the same syslog, and we want to display the date, time,
+and process id that's inside the square brackets. We can read each line
+of the syslog and pass the contents to the show_time_of_pid function.
+Fill in the gaps to extract the date, time, and process id from the 
+passed line, and return this format: Jul 6 14:01:23 pid:29440."""
+import re
+def show_time_of_pid(line):
+  pattern = r"(\w{3} \d{1,2} \d{2}:\d{2}:\d{2}).*?\[(\d+)\]"
+  result = re.search(pattern, line)
+  return f"{result.group(1)} pid:{result.group(2)}"
+
+print(show_time_of_pid("Jul 6 14:01:23 computer.name CRON[29440]: USER (good_user)")) # Jul 6 14:01:23 pid:29440
+
+print(show_time_of_pid("Jul 6 14:02:08 computer.name jam_tag=psim[29187]: (UUID:006)")) # Jul 6 14:02:08 pid:29187
+
+print(show_time_of_pid("Jul 6 14:02:09 computer.name jam_tag=psim[29187]: (UUID:007)")) # Jul 6 14:02:09 pid:29187
+
+print(show_time_of_pid("Jul 6 14:03:01 computer.name CRON[29440]: USER (naughty_user)")) # Jul 6 14:03:01 pid:29440
+
+print(show_time_of_pid("Jul 6 14:03:40 computer.name cacheclient[29807]: start syncing from \"0xDEADBEEF\"")) # Jul 6 14:03:40 pid:29807
+
+print(show_time_of_pid("Jul 6 14:04:01 computer.name CRON[29440]: USER (naughty_user)")) # Jul 6 14:04:01 pid:29440
+
+print(show_time_of_pid("Jul 6 14:05:01 computer.name CRON[29440]: USER (naughty_user)")) # Jul 6 14:05:01 pid:29440

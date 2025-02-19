@@ -38,3 +38,25 @@ print(calculate_weighted_grade(60, 65, 70, 75))  # Output: "C"
 print(calculate_weighted_grade(50, 55, 60, 65))  # Output: "D"
 print(calculate_weighted_grade(40, 45, 50, 55))  # Output: "F"
 
+print("*******************************")
+def repeat_twice(vowels):
+    result = ""
+    for i in vowels:
+        if i == "a":
+            result = result + (i * 2)
+        elif i == "e":
+            result = result + (i * 2)
+        elif i == "i":
+            result = result + (i * 2)
+        elif i == "o":
+            result = result + (i * 2)
+        elif i == "u":
+            result = result + (i * 2)
+        else:
+            result = result
+    return result
+
+print(repeat_twice("Hello"))
+print(repeat_twice("String"))
+print(repeat_twice("Vowel Test"))
+print(repeat_twice("123!"))
