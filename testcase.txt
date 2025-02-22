@@ -1,0 +1,49 @@
+Below is a list of commonly used assert methods in the TestCase class. For more information on each method, select the embedded link in the list provided.    
+
+The 
+assertEqual(a, b)
+ method checks that a == b
+
+The 
+assertNotEqual(a, b)
+ method checks that a != b
+
+The 
+assertTrue(x)
+ method checks that bool(x) is True
+
+The 
+assertFalse(x)
+ method checks that bool(x) is False
+
+The 
+assertIs(a, b)
+ method checks that a is b
+
+The 
+assertIsNot(a, b)
+ method checks that a is not b
+
+The 
+assertIsNone(x)
+ method checks that x is None
+
+The 
+assertIsNotNone(x)
+ method checks that x is not None
+
+The 
+assertIn(a, b)
+ method checks that a in b
+
+The 
+assertNotIn(a, b)
+ method checks that a not in b
+
+The 
+assertIsInstance(a, b)
+ method checks that isinstance(a, b)
+
+The 
+assertNotIsInstance(a, b)
+ method checks that not isinstance(a, b)
