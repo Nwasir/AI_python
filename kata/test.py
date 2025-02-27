@@ -12,15 +12,17 @@ print("there are", numberOfDays.days, "days from my 2024 christmas to myu birthd
 print("**********************")
 # Write function RemoveExclamationMarks which removes all exclamation 
 # marks from a given string.
-def remove_exclamation_marks(s):
-    return s.replace("!", "")
+# def remove_exclamation_marks(s):
+#     return s.replace("!", "")
 
-print(remove_exclamation_marks("hello! word!"))
+# print(remove_exclamation_marks("hello! word!"))
 
 #        OR
 
-# def remove_exclamation_marks(s):
-#     return ''.join([char for char in s if char != "!"])
+def remove_exclamation_marks(s):
+    return ''.join([char for char in s if char != "!"])
+
+print(remove_exclamation_marks("hello! word!"))
 #  OR
 # def remove_exclamation_marks(s):
 #     #your code here
