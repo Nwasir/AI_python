@@ -36,3 +36,4 @@ def switch_it_up(number):
         return "Zero"
 
 print(switch_it_up(4))
+print(switch_it_up(0))
